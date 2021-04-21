@@ -17,13 +17,8 @@ var path = process.env.FILEPATH;
 var debugMode = true;
 var loggerMode = true;
 
-//var username = process.env.AUSERNAME;
-//var password = process.env.APASSWORD;
-
-//Alt bot
-
-var username = process.env.USERNAME;
-var password = process.env.PASSWORD;
+var username = process.env.AUSERNAME;
+var password = process.env.APASSWORD;
 
 //Main Bot
 
