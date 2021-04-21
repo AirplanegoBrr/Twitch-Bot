@@ -106,6 +106,7 @@ function onMessageHandler (target, context, msg, self) {
   if (target == "#airplanegobrr_"){
   //Whitelist mode ^^
   //To remove replace airplane with target
+  msgChecker(target, context, msg, commandName);
 
   if (commandName.startsWith("!dice")) {
     rollDice(target, context, msg, commandName);
@@ -179,6 +180,13 @@ function logger(target, context, msg, commandName){
   if (senta == 50){
     senta=0;
     localStorage.setItem("number", sent);
+  }
+}
+
+function msgChecker(target, context, msg, commandName){
+  if (commandName.startsWith("Wanna become famous")) {
+    client.say(target, "Auto banned user @"+ context["username"]+" for scams")
+    client.ban(target,context["username"],"Scams")
   }
 }
 
