@@ -2,6 +2,7 @@ const tmi = require('tmi.js');
 var fs = require('fs');
 const os = require('os');
 require('dotenv').config();
+
 //const du = require('du');
 if (typeof localStorage === "undefined" || localStorage === null) {
   var LocalStorage = require('node-localstorage').LocalStorage;
@@ -17,8 +18,8 @@ var path = process.env.FILEPATH;
 var debugMode = true;
 var loggerMode = true;
 
-var username = process.env.AUSERNAME;
-var password = process.env.APASSWORD;
+var username = process.env.USERNAME;
+var password = process.env.PASSWORD;
 
 console.log("Done! Starting login");
 console.log(process.env.CHANNELS.split(","))
