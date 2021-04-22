@@ -20,6 +20,9 @@ var loggerMode = true;
 var username = process.env.AUSERNAME;
 var password = process.env.APASSWORD;
 
+console.log("Done! Starting login");
+console.log(process.env.CHANNELS.split(","))
+
 //Main Bot
 
 //fs.appendFile("message.txt", "Hello ! You are", (err) => { if (err) { console.log(err);}}); 
@@ -30,35 +33,7 @@ const opts = {
     username: username,
     password: password
   },
-  channels: [
-    //Small Steamers
-    "airplanegobrr_",
-    "airplanegobrr_bot",
-    "airplanegobrr_bot2",
-    "brad1758",
-    "flonc_",
-    "adrianbssyt",
-    /*
-    //Big
-    "ludwig",
-    "ranboolive",
-    "moistcr1tikal",
-    "ninja",
-    "xqcow",
-    "oxsidiann",
-    "welyn",
-    "swaggersouls",
-    "ottomated",
-    "tomstanniland",
-    //Mid
-    "darkosto",
-    "raginxpanda",
-    //PG++
-    "amouranth",
-    "azra",
-    "faith"
-    //*/
-  ]
+  channels: process.env.CHANNELS.split(",")
 };
 
 // Create a client with our options
