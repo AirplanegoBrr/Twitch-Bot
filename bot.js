@@ -155,9 +155,9 @@ function logger(target, context, msg, commandName){
 }
 
 function msgChecker(target, context, msg, commandName){
-  if (commandName.startsWith("Wanna become famous")) {
-    client.say(target, "Auto banned user @"+ context["username"]+" for scams")
-    client.ban(target,context["username"],"Scams")
+  if (commandName.startsWith("Wanna become famous?")) {
+    client.say(target, "Auto banned user @"+ context["username"]+" for scams");
+    client.ban(target,context["username"],"Scams");
   }
 }
 
